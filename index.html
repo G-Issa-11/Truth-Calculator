@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Truth Value Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Math&family=Raleway:wght@100;200;300;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="header">Truth Value Calculator</h1>
+      <p class="description">
+        A tool that finds the truth values of the conjunction, disjunction,
+        exclusive or, conditional statement, and biconditional of the
+        propostions p and q, based on the values you give them.
+      </p>
+
+      <div class="input-output">
+        <div class="input-side">
+          <form action="" class="calculator" id="calculator">
+            <div class="inputs">
+              <div class="first-val">
+                <label for="p-val">First propsition (p)</label>
+                <select name="p-val" id="p-val" required>
+                  <option value="" selected disabled hidden
+                    >Select an Option</option
+                  >
+                  <option value="true">True</option>
+                  <option value="false">False</option>
+                </select>
+              </div>
+              <div class="second-val">
+                <label for="q-val">Second propsition (q)</label>
+                <select id="q-val" name="q-val" required>
+                  <option value="" selected disabled hidden
+                    >Select an Option</option
+                  >
+                  <option value="true">True</option>
+                  <option value="false">False</option>
+                </select>
+              </div>
+            </div>
+            <div class="buttons">
+              <button
+                class="btn generate-btn"
+                id="results-btn"
+                name="action"
+                type="submit"
+              >
+                Generate Values
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="output-side">
+          <table class="output">
+            <tr>
+              <th>Opertation</th>
+              <th>Value</th>
+            </tr>
+            <tr>
+              <th>p ∧ q</th>
+              <th id="conjunction"></th>
+            </tr>
+            <tr>
+              <th>p ∨ q</th>
+              <th id="disjunction"></th>
+            </tr>
+            <tr>
+              <th>p ⊕ q</th>
+              <th id="xor"></th>
+            </tr>
+            <tr>
+              <th>p → q</th>
+              <th id="implication"></th>
+            </tr>
+            <tr>
+              <th>p ↔ q</th>
+              <th id="biconditional"></th>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="footer">
+        <p>Made with <i class="uil uil-heart"></i> by Ghada Issa</p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
